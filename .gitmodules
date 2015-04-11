@@ -1,0 +1,3 @@
+[submodule "xedit-wp/client"]
+	path = xedit-wp/client
+	url = https://github.com/mc007/xjs.git
