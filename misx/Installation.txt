@@ -1,0 +1,13 @@
+1. Upload the provided the zip (xedit-wp.zip: all included or xedit-wp-cdn.zip: small version) file to the Wordpress
+plugin installer ('Add new')
+
+2. Activate plugin ("File Editor")
+
+3. Thats it!
+
+Now simply open:
+
+- Plugins/Editor
+- Appearance/Editor
+
+
