@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" class="ie8 wp-toolbar" lang="en-US">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar" lang="en-US">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Edit Themes &lsaquo; Pearls Media Publishing Ltd. &#8212; </title>
+    <script type="text/javascript">
+        addLoadEvent = function (func) {
+            if (typeof jQuery != "undefined")jQuery(document).ready(func); else if (typeof wpOnload != 'function') {
+                wpOnload = func;
+            } else {
+                var oldonload = wpOnload;
+                wpOnload = function () {
+                    oldonload();
+                    func();
+                }
+            }
+        };
+        var ajaxurl = '/wp-admin/admin-ajax.php',
+                pagenow = 'theme-editor',
+                typenow = '',
+                adminpage = 'theme-editor-php',
+                thousandsSeparator = ',',
+                decimalPoint = '.',
+                isRtl = 0;
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel='stylesheet'
+          href='./demo_files/load-styles.php.css?c=0&amp;dir=ltr&amp;load=dashicons,admin-bar,wp-admin,buttons,wp-auth-check,media-views&amp;ver=4.1.1'
+          type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='open-sans-css'
+          href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.1.1'
+          type='text/css' media='all'/>
+    <!--[if lte IE 7]>
+    <link rel='stylesheet' id='ie-css' href='http://pearls-media.com/wp-admin/css/ie.min.css?ver=4.1.1' type='text/css'
+          media='all'/>
+    <![endif]-->
+
+
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var userSettings = {"url": "\/", "uid": "1", "time": "1428879003", "secure": ""};
+        /* ]]> */
+    </script>
+    <script type='text/javascript'
+            src='http://pearls-media.com/wp-admin/load-scripts.php?c=0&amp;load%5B%5D=jquery-core,jquery-migrate,utils,plupload,json2&amp;ver=4.1.1'></script>
+
+
+    <style>
+        .claro {
+            font-size: 0.88em !important;
+        }
+
+        .actionToolbarButtonElusive {
+            font-size: 1.3em !important;
+        }
+    </style>
+    <script type="text/javascript">var _wpColorScheme = {
+        "icons": {
+            "base": "#999",
+            "focus": "#2ea2cc",
+            "current": "#fff"
+        }
+    };</script>
+    <style type="text/css" media="print">#wpadminbar {
+        display: none;
+    }</style>
+</head>
+<body class="wp-admin wp-core-ui no-js  theme-editor-php admin-bar branch-4-1 version-4-1-1 admin-color-fresh locale-en-us no-customize-support no-svg">
+<script type="text/javascript">
+    document.body.className = document.body.className.replace('no-js', 'js');
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?' + cs + '(\\s+|$)');
+
+        request = true;
+
+        b[c] = b[c].replace(rcs, ' ');
+        b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+    }());
+</script>
+
+<div id="wpwrap">
+<a tabindex="1" href="#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+    <ul id="adminmenu" role="navigation">
+
+
+        <li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last"
+            id="menu-dashboard">
+            <a href='index.php'
+               class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-dashboard'><br/></div>
+                <div class='wp-menu-name'>Dashboard</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Dashboard</li>
+                <li class="wp-first-item"><a href='index.php' class="wp-first-item">Home</a></li>
+                <li><a href='update-core.php'>Updates <span class='update-plugins count-7'
+                                                            title='4 Plugin Updates, 3 Theme Updates'><span
+                        class='update-count'>7</span></span></a></li>
+            </ul>
+        </li>
+        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+            <div class="separator"></div>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first"
+            id="menu-posts">
+            <a href='edit.php'
+               class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-post'><br/></div>
+                <div class='wp-menu-name'>Posts</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Posts</li>
+                <li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li>
+                <li><a href='post-new.php'>Add New</a></li>
+                <li><a href='edit-tags.php?taxonomy=category'>Categories</a></li>
+                <li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+            <a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-media'><br/></div>
+                <div class='wp-menu-name'>Media</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Media</li>
+                <li class="wp-first-item"><a href='upload.php' class="wp-first-item">Library</a></li>
+                <li><a href='media-new.php'>Add New</a></li>
+                <li><a href='upload.php?page=mrelocator-submenu-handle'>Media File Manager</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+            <a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-page'><br/></div>
+                <div class='wp-menu-name'>Pages</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Pages</li>
+                <li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item">All Pages</a></li>
+                <li><a href='post-new.php?post_type=page'>Add New</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-comments" id="menu-comments">
+            <a href='edit-comments.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-comments"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-comments'><br/></div>
+                <div class='wp-menu-name'>Comments <span class='awaiting-mod count-0'><span
+                        class='pending-count'>0</span></span></div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Comments <span class='awaiting-mod count-0'><span
+                        class='pending-count'>0</span></span></li>
+                <li class="wp-first-item"><a href='edit-comments.php' class="wp-first-item">All Comments</a></li>
+                <li><a href='edit-comments.php?page=disqus'>Disqus</a></li>
+            </ul>
+        </li>
+
+        <li class="wp-not-current-submenu wp-menu-separator bbpress" aria-hidden="true">
+            <div class="separator"></div>
+        </li>
+
+        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+            <div class="separator"></div>
+        </li>
+        <li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first"
+            id="menu-appearance">
+            <a href='themes.php'
+               class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-appearance'><br/></div>
+                <div class='wp-menu-name'>Appearance</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Appearance</li>
+                <li class="wp-first-item"><a href='themes.php' class="wp-first-item">Themes</a></li>
+                <li class="hide-if-no-customize"><a href='customize.php?return=%2Fwp-admin%2Ftheme-editor.php'
+                                                    class="hide-if-no-customize">Customize</a></li>
+                <li><a href='widgets.php'>Widgets</a></li>
+                <li><a href='nav-menus.php'>Menus</a></li>
+                <li class="current"><a href='theme-editor.php' class="current">Editor</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+            <a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-plugins'><br/></div>
+                <div class='wp-menu-name'>Plugins <span class='update-plugins count-4'><span
+                        class='plugin-count'>4</span></span></div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Plugins <span class='update-plugins count-4'><span
+                        class='plugin-count'>4</span></span></li>
+                <li class="wp-first-item"><a href='plugins.php' class="wp-first-item">Installed Plugins</a></li>
+                <li><a href='plugin-install.php'>Add New</a></li>
+                <li><a href='plugin-editor.php'>Editor</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+            <a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-users'><br/></div>
+                <div class='wp-menu-name'>Users</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Users</li>
+                <li class="wp-first-item"><a href='users.php' class="wp-first-item">All Users</a></li>
+                <li><a href='user-new.php'>Add New</a></li>
+                <li><a href='profile.php'>Your Profile</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+            <a href='tools.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-tools'><br/></div>
+                <div class='wp-menu-name'>Tools</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Tools</li>
+                <li class="wp-first-item"><a href='tools.php' class="wp-first-item">Available Tools</a></li>
+                <li><a href='import.php'>Import</a></li>
+                <li><a href='export.php'>Export</a></li>
+                <li><a href='tools.php?page=bbp-repair'>Forums</a></li>
+            </ul>
+        </li>
+        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+            <a href='options-general.php'
+               class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last"
+               aria-haspopup="true">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-settings'><br/></div>
+                <div class='wp-menu-name'>Settings</div>
+            </a>
+            <ul class='wp-submenu wp-submenu-wrap'>
+                <li class='wp-submenu-head'>Settings</li>
+                <li class="wp-first-item"><a href='options-general.php' class="wp-first-item">General</a></li>
+                <li><a href='options-writing.php'>Writing</a></li>
+                <li><a href='options-reading.php'>Reading</a></li>
+                <li><a href='options-discussion.php'>Discussion</a></li>
+                <li><a href='options-media.php'>Media</a></li>
+                <li><a href='options-permalink.php'>Permalinks</a></li>
+                <li><a href='options-general.php?page=bbpress'>Forums</a></li>
+                <li><a href='options-general.php?page=crayon_settings'>Crayon</a></li>
+                <li><a href='options-general.php?page=mrelocator_submenu-handle'>Media File Manager</a></li>
+                <li><a href='options-general.php?page=WP-OAuth'>WP-OAuth</a></li>
+                <li><a href='options-general.php?page=xcommander_options'>XFile</a></li>
+            </ul>
+        </li>
+        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+            <div class="separator"></div>
+        </li>
+        <li class="wp-not-current-submenu menu-top menu-icon-generic toplevel_page_xfile menu-top-first"
+            id="toplevel_page_xfile">
+            <a href='admin.php?page=xfile'
+               class="wp-not-current-submenu menu-top menu-icon-generic toplevel_page_xfile menu-top-first">
+                <div class="wp-menu-arrow">
+                    <div></div>
+                </div>
+                <div class='wp-menu-image dashicons-before dashicons-admin-generic'><br/></div>
+                <div class='wp-menu-name'>Files</div>
+            </a></li>
+        <li id="collapse-menu" class="hide-if-no-js">
+            <div id="collapse-button">
+                <div></div>
+            </div>
+            <span>Collapse menu</span></li>
+    </ul>
+</div>
+<div id="wpcontent">
+
+<div id="wpadminbar" class="nojq nojs" role="navigation">
+    <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+
+    <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0">
+        <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+            <li id="wp-admin-bar-menu-toggle"><a class="ab-item" href="#"><span class="ab-icon"></span><span
+                    class="screen-reader-text">Menu</span></a></li>
+            <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                             href="http://pearls-media.com/wp-admin/about.php"
+                                                             title="About WordPress"><span class="ab-icon"></span></a>
+
+                <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+                        <li id="wp-admin-bar-about"><a class="ab-item"
+                                                       href="http://pearls-media.com/wp-admin/about.php">About
+                            WordPress</a></li>
+                        <li id="wp-admin-bar-bbp-about"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/index.php?page=bbp-about">About
+                            bbPress</a></li>
+                    </ul>
+                    <ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+                        <li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wordpress.org/">WordPress.org</a>
+                        </li>
+                        <li id="wp-admin-bar-documentation"><a class="ab-item" href="http://codex.wordpress.org/">Documentation</a>
+                        </li>
+                        <li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wordpress.org/support/">Support
+                            Forums</a></li>
+                        <li id="wp-admin-bar-feedback"><a class="ab-item"
+                                                          href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                               href="http://pearls-media.com/">Plugin & Theme Editor</a>
+
+                <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+                        <li id="wp-admin-bar-view-site"><a class="ab-item" href="http://pearls-media.com/">Visit
+                            Site</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="wp-admin-bar-updates"><a class="ab-item" href="http://pearls-media.com/wp-admin/update-core.php"
+                                             title="4 Plugin Updates, 3 Theme Updates"><span
+                    class="ab-icon"></span><span class="ab-label">7</span><span class="screen-reader-text">4 Plugin Updates, 3 Theme Updates</span></a>
+            </li>
+            <li id="wp-admin-bar-comments"><a class="ab-item" href="http://pearls-media.com/wp-admin/edit-comments.php"
+                                              title="0 comments awaiting moderation"><span class="ab-icon"></span><span
+                    id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a></li>
+            <li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                                 href="http://pearls-media.com/wp-admin/post-new.php"
+                                                                 title="Add New"><span class="ab-icon"></span><span
+                    class="ab-label">New</span></a>
+
+                <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+                        <li id="wp-admin-bar-new-post"><a class="ab-item"
+                                                          href="http://pearls-media.com/wp-admin/post-new.php">Post</a>
+                        </li>
+                        <li id="wp-admin-bar-new-media"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/media-new.php">Media</a>
+                        </li>
+                        <li id="wp-admin-bar-new-page"><a class="ab-item"
+                                                          href="http://pearls-media.com/wp-admin/post-new.php?post_type=page">Page</a>
+                        </li>
+                        <li id="wp-admin-bar-new-forum"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/post-new.php?post_type=forum">Forum</a>
+                        </li>
+                        <li id="wp-admin-bar-new-topic"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/post-new.php?post_type=topic">Topic</a>
+                        </li>
+                        <li id="wp-admin-bar-new-reply"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/post-new.php?post_type=reply">Reply</a>
+                        </li>
+                        <li id="wp-admin-bar-new-portfolio"><a class="ab-item"
+                                                               href="http://pearls-media.com/wp-admin/post-new.php?post_type=portfolio">Portfolio
+                            Entry</a></li>
+                        <li id="wp-admin-bar-new-user"><a class="ab-item"
+                                                          href="http://pearls-media.com/wp-admin/user-new.php">User</a>
+                        </li>
+                        <li id="wp-admin-bar-ab-ls-add-new"><a class="ab-item"
+                                                               href="http://pearls-media.com/wp-admin/admin.php?page=layerslider">LayerSlider</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="wp-admin-bar-avia" class="menupop"><a class="ab-item" aria-haspopup="true"
+                                                          href="http://pearls-media.com/wp-admin/admin.php?page=avia"
+                                                          onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia&quot;)); window.location.reload(true);  ">Theme
+                Options</a>
+
+                <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-avia-default" class="ab-submenu">
+                        <li id="wp-admin-bar-layout"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_general_layout"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_general_layout&quot;)); window.location.reload(true);  ">General
+                            Layout</a></li>
+                        <li id="wp-admin-bar-styling"><a class="ab-item"
+                                                         href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_general_styling"
+                                                         onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_general_styling&quot;)); window.location.reload(true);  ">General
+                            Styling</a></li>
+                        <li id="wp-admin-bar-customize"><a class="ab-item"
+                                                           href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_advanced_styling"
+                                                           onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_advanced_styling&quot;)); window.location.reload(true);  ">Advanced
+                            Styling</a></li>
+                        <li id="wp-admin-bar-header"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_header"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_header&quot;)); window.location.reload(true);  ">Header</a>
+                        </li>
+                        <li id="wp-admin-bar-sidebars"><a class="ab-item"
+                                                          href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_sidebar_settings"
+                                                          onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_sidebar_settings&quot;)); window.location.reload(true);  ">Sidebar
+                            Settings</a></li>
+                        <li id="wp-admin-bar-footer"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_footer"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_footer&quot;)); window.location.reload(true);  ">Footer</a>
+                        </li>
+                        <li id="wp-admin-bar-blog"><a class="ab-item"
+                                                      href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_blog_layout"
+                                                      onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_blog_layout&quot;)); window.location.reload(true);  ">Blog
+                            Layout</a></li>
+                        <li id="wp-admin-bar-social"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_social_profiles"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_social_profiles&quot;)); window.location.reload(true);  ">Social
+                            Profiles</a></li>
+                        <li id="wp-admin-bar-demo"><a class="ab-item"
+                                                      href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_demo_import"
+                                                      onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_demo_import&quot;)); window.location.reload(true);  ">Demo
+                            Import</a></li>
+                        <li id="wp-admin-bar-upload"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_importexport"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_importexport&quot;)); window.location.reload(true);  ">Import/Export</a>
+                        </li>
+                        <li id="wp-admin-bar-update"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-admin/admin.php?page=avia#goto_theme_update"
+                                                        onclick="self.location.replace(encodeURI(&quot;http://pearls-media.com/wp-admin/admin.php?page=avia#goto_theme_update&quot;)); window.location.reload(true);  ">Theme
+                            Update</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+            <li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true"
+                                                                            href="http://pearls-media.com/wp-admin/profile.php"
+                                                                            title="My Account">Howdy, admin<img alt=''
+                                                                                                                src='http://0.gravatar.com/avatar/45ad3de7c2679199e4f38d19fad22d67?s=26&amp;d=&amp;r=G'
+                                                                                                                class='avatar avatar-26 photo'
+                                                                                                                height='26'
+                                                                                                                width='26'/></a>
+
+                <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-user-actions" class="ab-submenu">
+                        <li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1"
+                                                           href="http://pearls-media.com/wp-admin/profile.php"><img
+                                alt=''
+                                src='http://0.gravatar.com/avatar/45ad3de7c2679199e4f38d19fad22d67?s=64&amp;d=&amp;r=G'
+                                class='avatar avatar-64 photo' height='64' width='64'/><span
+                                class='display-name'>admin</span></a></li>
+                        <li id="wp-admin-bar-edit-profile"><a class="ab-item"
+                                                              href="http://pearls-media.com/wp-admin/profile.php">Edit
+                            My Profile</a></li>
+                        <li id="wp-admin-bar-logout"><a class="ab-item"
+                                                        href="http://pearls-media.com/wp-login.php?action=logout&#038;_wpnonce=9d90e58819&#038;redirect_to=http%3A%2F%2Fpearls-media.com%2Fwp-admin%2Ftheme-editor.php%3Floggedout%3Dtrue">Log
+                            Out</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a class="screen-reader-shortcut"
+       href="http://pearls-media.com/wp-login.php?action=logout&#038;_wpnonce=9d90e58819&#038;redirect_to=http%3A%2F%2Fpearls-media.com%2Fwp-admin%2Ftheme-editor.php%3Floggedout%3Dtrue">Log
+        Out</a>
+</div>
+
+
+<div id="wpbody">
+
+    <div id="wpbody-content" aria-label="Main content" tabindex="0">
+        <div id="screen-meta" class="metabox-prefs">
+
+            <div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="Contextual Help Tab">
+                <div id="contextual-help-back"></div>
+                <div id="contextual-help-columns">
+                    <div class="contextual-help-tabs">
+                        <ul>
+
+                            <li id="tab-link-overview" class="active">
+                                <a href="#tab-panel-overview" aria-controls="tab-panel-overview">
+                                    Overview </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contextual-help-sidebar">
+                        <p><strong>For more information:</strong></p>
+
+                        <p><a href="http://codex.wordpress.org/Theme_Development" target="_blank">Documentation on Theme
+                            Development</a></p>
+
+                        <p><a href="http://codex.wordpress.org/Using_Themes" target="_blank">Documentation on Using
+                            Themes</a></p>
+
+                        <p><a href="http://codex.wordpress.org/Editing_Files" target="_blank">Documentation on Editing
+                            Files</a></p>
+
+                        <p><a href="http://codex.wordpress.org/Template_Tags" target="_blank">Documentation on Template
+                            Tags</a></p>
+
+                        <p><a href="https://wordpress.org/support/" target="_blank">Support Forums</a></p></div>
+
+                    <div class="contextual-help-tabs-wrap">
+
+                        <div id="tab-panel-overview" class="help-tab-content active">
+                            <p>You can use the Theme Editor to edit the individual CSS and PHP files which make up your
+                                theme.</p>
+
+                            <p>Begin by choosing a theme to edit from the dropdown menu and clicking Select. A list then
+                                appears of all the template files. Clicking once on any file name causes the file to
+                                appear in the large Editor box.</p>
+
+                            <p>For PHP files, you can use the Documentation dropdown to select from functions recognized
+                                in that file. Look Up takes you to a web page with reference material about that
+                                particular function.</p>
+
+                            <p id="newcontent-description">In the editing area the Tab key enters a tab character. To
+                                move below this area by pressing Tab, press the Esc key followed by the Tab key.</p>
+
+                            <p>After typing in your edits, click Update File.</p>
+
+                            <p><strong>Advice:</strong> think very carefully about your site crashing if you are
+                                live-editing the theme currently in use.</p>
+
+                            <p>Upgrading to a newer version of the same theme will override changes made here. To avoid
+                                this, consider creating a <a href="http://codex.wordpress.org/Child_Themes"
+                                                             target="_blank">child theme</a> instead.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="screen-meta-links">
+            <div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                <a href="#contextual-help-wrap" id="contextual-help-link" class="show-settings"
+                   aria-controls="contextual-help-wrap" aria-expanded="false">Help</a>
+            </div>
+        </div>
+        <div class="wrap">
+            <h2>Edit Themes</h2>
+
+            <div class="fileedit-sub">
+                <div class="alignleft">
+                    <h3>Enfold: style.css</h3>
+                </div>
+
+                <br class="clear"/>
+            </div>
+            <div id="templateside">
+                <h3>Templates</h3>
+                <ul>
+                    <li><a href="theme-editor.php?file=404.php&amp;theme=enfold">404.php</a></li>
+                    <li><a href="theme-editor.php?file=archive.php&amp;theme=enfold">archive.php</a></li>
+                    <li><a href="theme-editor.php?file=author.php&amp;theme=enfold">author.php</a></li>
+                    <li><a href="theme-editor.php?file=comments.php&amp;theme=enfold">comments.php</a></li>
+                    <li><a href="theme-editor.php?file=config-bbpress%2Fconfig.php&amp;theme=enfold">config.php</a></li>
+                    <li>
+                        <a href="theme-editor.php?file=config-events-calendar%2Fconfig.php&amp;theme=enfold">config.php</a>
+                    </li>
+                    <li>
+                        <a href="theme-editor.php?file=config-events-calendar%2Fevent-mod-css-dynamic.php&amp;theme=enfold">event-mod-css-dynamic.php</a>
+                    </li>
+                    <li><a href="theme-editor.php?file=config-gravityforms%2Fconfig.php&amp;theme=enfold">config.php</a>
+                    </li>
+                    <li><a href="theme-editor.php?file=config-layerslider%2Fconfig.php&amp;theme=enfold">config.php</a>
+                    </li>
+
+                </ul>
+                <h3>Styles</h3>
+                <ul>
+                    <li><a href="theme-editor.php?file=style.css&amp;theme=enfold"><span
+                            class="highlight">style.css</span></a></li>
+                </ul>
+            </div>
+            <form name="template" id="template" action="theme-editor.php" method="post">
+                <input type="hidden" id="_wpnonce" name="_wpnonce" value="50d50875cb"/><input type="hidden"
+                                                                                              name="_wp_http_referer"
+                                                                                              value="/wp-admin/theme-editor.php"/>
+
+<div>
+<textarea cols="70" rows="30" name="newcontent" id="newcontent" aria-describedby="newcontent-description">
+.mejs-container {
+  clear: both;
+}
+.mejs-container * {
+  font-family: Helvetica, Arial;
+}
+.mejs-container,
+.mejs-embed,
+.mejs-embed body,
+.mejs-container .mejs-controls {
+  background: #222;
+}
+.mejs-controls a.mejs-horizontal-volume-slider {
+  display: table;
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: #fff;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #0074a2;
+}
+.mejs-controls .mejs-time-rail .mejs-time-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  background: rgba(255, 255, 255, .33);
+}
+.mejs-controls .mejs-time-rail span,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  border-radius: 0;
+}
+.mejs-controls .mejs-offscreen {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+.mejs-controls a:focus > .mejs-offscreen {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  text-decoration: none;
+  text-transform: none;
+  width: auto;
+}
+.mejs-overlay-loading {
+  background: transparent;
+}
+</textarea>
+                    <input type="hidden" name="action" value="update"/>
+                    <input type="hidden" name="file" value="style.css"/>
+                    <input type="hidden" name="theme" value="enfold"/>
+                    <input type="hidden" name="scrollto" id="scrollto" value="0"/>
+                </div>
+
+                <div>
+                    <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary"
+                                             value="Update File"/></p></div>
+            </form>
+            <br class="clear"/>
+        </div>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            jQuery(document).ready(function ($) {
+                $('#template').submit(function () {
+                    $('#scrollto').val($('#newcontent').scrollTop());
+                });
+                $('#newcontent').scrollTop($('#scrollto').val());
+            });
+            /* ]]> */
+        </script>
+
+        <div class="clear"></div>
+    </div>
+    <!-- wpbody-content -->
+    <div class="clear"></div>
+</div>
+<!-- wpbody -->
+<div class="clear"></div>
+</div>
+<!-- wpcontent -->
+
+<div id="wpfooter">
+
+
+    <div class="clear"></div>
+</div>
+<div id='wpoa-result'></div>
+<!--[if lte IE 8]>
+<style>
+    .attachment:focus {
+        outline: #1e8cbe solid;
+    }
+
+    .selected.attachment {
+        outline: #1e8cbe solid;
+    }
+</style>
+<![endif]-->
+<script type="text/html" id="tmpl-media-frame">
+    <div class="media-frame-menu"></div>
+    <div class="media-frame-title"></div>
+    <div class="media-frame-router"></div>
+    <div class="media-frame-content"></div>
+    <div class="media-frame-toolbar"></div>
+    <div class="media-frame-uploader"></div>
+</script>
+
+<script type="text/html" id="tmpl-media-modal">
+    <div class="media-modal wp-core-ui">
+        <a class="media-modal-close" href="#"><span class="media-modal-icon"><span class="screen-reader-text">Close media panel</span></span></a>
+
+        <div class="media-modal-content"></div>
+    </div>
+    <div class="media-modal-backdrop"></div>
+</script>
+
+<script type="text/html" id="tmpl-uploader-window">
+    <div class="uploader-window-content">
+        <h3>Drop files to upload</h3>
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-uploader-editor">
+    <div class="uploader-editor-content">
+        <div class="uploader-editor-title">Drop files to upload</div>
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-uploader-inline">
+    <# var messageClass = data.message ? 'has-upload-message' : 'no-upload-message'; #>
+        <# if ( data.canClose ) { #>
+            <button class="close dashicons dashicons-no"><span class="screen-reader-text">Close uploader</span></button>
+            <# } #>
+                <div class="uploader-inline-content {{ messageClass }}">
+                    <# if ( data.message ) { #>
+                        <h3 class="upload-message">{{ data.message }}</h3>
+                        <# } #>
+                            <div class="upload-ui">
+                                <h3 class="upload-instructions drop-instructions">Drop files anywhere to upload</h3>
+
+                                <p class="upload-instructions drop-instructions">or</p>
+                                <a href="#" class="browser button button-hero">Select Files</a>
+                            </div>
+
+                            <div class="upload-inline-status"></div>
+
+                            <div class="post-upload-ui">
+
+                                <p class="max-upload-size">Maximum upload file size: 128 MB.</p>
+
+                                <# if ( data.suggestedWidth && data.suggestedHeight ) { #>
+                                    <p class="suggested-dimensions">
+                                        Suggested image dimensions: {{data.suggestedWidth}} &times;
+                                        {{data.suggestedHeight}}
+                                    </p>
+                                    <# } #>
+
+                            </div>
+                </div>
+</script>
+
+<script type="text/html" id="tmpl-media-library-view-switcher">
+    <a href="/wp-admin/theme-editor.php?mode=list" class="view-list">
+        <span class="screen-reader-text">List View</span>
+    </a>
+    <a href="/wp-admin/theme-editor.php?mode=grid" class="view-grid current">
+        <span class="screen-reader-text">Grid View</span>
+    </a>
+</script>
+
+<script type="text/html" id="tmpl-uploader-status">
+    <h3>Uploading</h3>
+    <a class="upload-dismiss-errors" href="#">Dismiss Errors</a>
+
+    <div class="media-progress-bar">
+        <div></div>
+    </div>
+    <div class="upload-details">
+			<span class="upload-count">
+				<span class="upload-index"></span> / <span class="upload-total"></span>
+			</span>
+        <span class="upload-detail-separator">&ndash;</span>
+        <span class="upload-filename"></span>
+    </div>
+    <div class="upload-errors"></div>
+</script>
+
+<script type="text/html" id="tmpl-uploader-status-error">
+    <span class="upload-error-label">Error</span>
+    <span class="upload-error-filename">{{{ data.filename }}}</span>
+    <span class="upload-error-message">{{ data.message }}</span>
+</script>
+
+<script type="text/html" id="tmpl-edit-attachment-frame">
+    <div class="edit-media-header">
+        <button class="left dashicons <# if ( ! data.hasPrevious ) { #> disabled <# } #>"><span
+                class="screen-reader-text">Edit previous media item</span></button>
+        <button class="right dashicons <# if ( ! data.hasNext ) { #> disabled <# } #>"><span class="screen-reader-text">Edit next media item</span>
+        </button>
+    </div>
+    <div class="media-frame-title"></div>
+    <div class="media-frame-content"></div>
+</script>
+
+<script type="text/html" id="tmpl-attachment-details-two-column">
+    <div class="attachment-media-view {{ data.orientation }}">
+        <div class="thumbnail thumbnail-{{ data.type }}">
+            <# if ( data.uploading ) { #>
+                <div class="media-progress-bar">
+                    <div></div>
+                </div>
+                <# } else if ( 'image' === data.type && data.sizes && data.sizes.large ) { #>
+                    <img class="details-image" src="{{ data.sizes.large.url }}" draggable="false"/>
+                    <# } else if ( 'image' === data.type && data.sizes && data.sizes.full ) { #>
+                        <img class="details-image" src="{{ data.sizes.full.url }}" draggable="false"/>
+                        <# } else if ( -1 === jQuery.inArray( data.type, [ 'audio', 'video' ] ) ) { #>
+                            <img class="details-image" src="{{ data.icon }}" class="icon" draggable="false"/>
+                            <# } #>
+
+                                <# if ( 'audio' === data.type ) { #>
+                                    <div class="wp-media-wrapper">
+                                        <audio style="visibility: hidden" controls class="wp-audio-shortcode"
+                                               width="100%" preload="none">
+                                            <source type="{{ data.mime }}" src="{{ data.url }}"/>
+                                        </audio>
+                                    </div>
+                                    <# } else if ( 'video' === data.type ) {
+                                            var w_rule = h_rule = '';
+                                            if ( data.width ) {
+                                            w_rule = 'width: ' + data.width + 'px;';
+                                            } else if ( wp.media.view.settings.contentWidth ) {
+                                            w_rule = 'width: ' + wp.media.view.settings.contentWidth + 'px;';
+                                            }
+                                            if ( data.height ) {
+                                            h_rule = 'height: ' + data.height + 'px;';
+                                            }
+                                            #>
+                                        <div style="{{ w_rule }}{{ h_rule }}" class="wp-media-wrapper wp-video">
+                                            <video controls="controls" class="wp-video-shortcode" preload="metadata"
+                                            <# if ( data.width ) { #>width="{{ data.width }}"
+                                                <# } #>
+                                                    <# if ( data.height ) { #>height="{{ data.height }}"
+                                                        <# } #>
+                                                            <# if ( data.image && data.image.src !== data.icon ) { #>
+                                                                poster="{{ data.image.src }}"
+                                                                <# } #>>
+                                                                    <source type="{{ data.mime }}"
+                                                                            src="{{ data.url }}"/>
+                                                                    </video>
+                                        </div>
+                                        <# } #>
+
+                                            <div class="attachment-actions">
+                                                <# if ( 'image' === data.type && ! data.uploading && data.sizes && data.can.save ) { #>
+                                                    <a class="button edit-attachment" href="#">Edit Image</a>
+                                                    <# } #>
+                                            </div>
+        </div>
+    </div>
+    <div class="attachment-info">
+			<span class="settings-save-status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+
+        <div class="details">
+            <div class="filename"><strong>File name:</strong> {{ data.filename }}</div>
+            <div class="filename"><strong>File type:</strong> {{ data.mime }}</div>
+            <div class="uploaded"><strong>Uploaded on:</strong> {{ data.dateFormatted }}</div>
+
+            <div class="file-size"><strong>File size:</strong> {{ data.filesizeHumanReadable }}</div>
+            <# if ( 'image' === data.type && ! data.uploading ) { #>
+                <# if ( data.width && data.height ) { #>
+                    <div class="dimensions"><strong>Dimensions:</strong> {{ data.width }} &times; {{ data.height }}
+                    </div>
+                    <# } #>
+                        <# } #>
+
+                            <# if ( data.fileLength ) { #>
+                                <div class="file-length"><strong>Length:</strong> {{ data.fileLength }}</div>
+                                <# } #>
+
+                                    <# if ( 'audio' === data.type && data.meta.bitrate ) { #>
+                                        <div class="bitrate">
+                                            <strong>Bitrate:</strong> {{ Math.round( data.meta.bitrate / 1000 ) }}kb/s
+                                            <# if ( data.meta.bitrate_mode ) { #>
+                                                {{ ' ' + data.meta.bitrate_mode.toUpperCase() }}
+                                                <# } #>
+                                        </div>
+                                        <# } #>
+
+                                            <div class="compat-meta">
+                                                <# if ( data.compat && data.compat.meta ) { #>
+                                                    {{{ data.compat.meta }}}
+                                                    <# } #>
+                                            </div>
+        </div>
+
+        <div class="settings">
+            <label class="setting" data-setting="url">
+                <span class="name">URL</span>
+                <input type="text" value="{{ data.url }}" readonly/>
+            </label>
+            <# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+                <label class="setting" data-setting="title">
+                    <span class="name">Title</span>
+                    <input type="text" value="{{ data.title }}" {{ maybeReadOnly }} />
+                </label>
+                <# if ( 'audio' === data.type ) { #>
+                    <label class="setting" data-setting="artist">
+                        <span class="name">Artist</span>
+                        <input type="text" value="{{ data.artist || data.meta.artist || '' }}"/>
+                    </label>
+                    <label class="setting" data-setting="album">
+                        <span class="name">Album</span>
+                        <input type="text" value="{{ data.album || data.meta.album || '' }}"/>
+                    </label>
+                    <# } #>
+                        <label class="setting" data-setting="caption">
+                            <span class="name">Caption</span>
+                            <textarea {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+                        </label>
+                        <# if ( 'image' === data.type ) { #>
+                            <label class="setting" data-setting="alt">
+                                <span class="name">Alt Text</span>
+                                <input type="text" value="{{ data.alt }}" {{ maybeReadOnly }} />
+                            </label>
+                            <# } #>
+                                <label class="setting" data-setting="description">
+                                    <span class="name">Description</span>
+                                    <textarea {{ maybeReadOnly }}>{{ data.description }}</textarea>
+                                </label>
+                                <label class="setting">
+                                    <span class="name">Uploaded By</span>
+                                    <span class="value">{{ data.authorName }}</span>
+                                </label>
+                                <# if ( data.uploadedToTitle ) { #>
+                                    <label class="setting">
+                                        <span class="name">Uploaded To</span>
+                                        <# if ( data.uploadedToLink ) { #>
+                                            <span class="value"><a href="{{ data.uploadedToLink }}">{{
+                                                data.uploadedToTitle }}</a></span>
+                                            <# } else { #>
+                                                <span class="value">{{ data.uploadedToTitle }}</span>
+                                                <# } #>
+                                    </label>
+                                    <# } #>
+                                        <div class="attachment-compat"></div>
+        </div>
+
+        <div class="actions">
+            <a class="view-attachment" href="{{ data.link }}">View attachment page</a>
+            <# if ( data.can.save ) { #> |
+                <a href="post.php?post={{ data.id }}&action=edit">Edit more details</a>
+                <# } #>
+                    <# if ( ! data.uploading && data.can.remove ) { #> |
+                        <a class="delete-attachment" href="#">Delete Permanently</a>
+                        <# } #>
+        </div>
+
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-attachment">
+    <div class="attachment-preview js--select-attachment type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
+        <div class="thumbnail">
+            <# if ( data.uploading ) { #>
+                <div class="media-progress-bar">
+                    <div style="width: {{ data.percent }}%"></div>
+                </div>
+                <# } else if ( 'image' === data.type && data.sizes ) { #>
+                    <div class="centered">
+                        <img src="{{ data.size.url }}" draggable="false" alt=""/>
+                    </div>
+                    <# } else { #>
+                        <div class="centered">
+                            <# if ( data.image && data.image.src && data.image.src !== data.icon ) { #>
+                                <img src="{{ data.image.src }}" class="thumbnail" draggable="false"/>
+                                <# } else { #>
+                                    <img src="{{ data.icon }}" class="icon" draggable="false"/>
+                                    <# } #>
+                        </div>
+                        <div class="filename">
+                            <div>{{ data.filename }}</div>
+                        </div>
+                        <# } #>
+        </div>
+        <# if ( data.buttons.close ) { #>
+            <a class="close media-modal-icon" href="#" title="Remove"></a>
+            <# } #>
+    </div>
+    <# if ( data.buttons.check ) { #>
+        <a class="check" href="#" title="Deselect" tabindex="-1">
+            <div class="media-modal-icon"></div>
+        </a>
+        <# } #>
+            <#
+                    var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly';
+                    if ( data.describe ) {
+                    if ( 'image' === data.type ) { #>
+                <input type="text" value="{{ data.caption }}" class="describe" data-setting="caption"
+                       placeholder="Caption this image&hellip;" {{ maybeReadOnly }} />
+                <# } else { #>
+                    <input type="text" value="{{ data.title }}" class="describe" data-setting="title"
+                    <# if ( 'video' === data.type ) { #>
+                        placeholder="Describe this video&hellip;"
+                        <# } else if ( 'audio' === data.type ) { #>
+                            placeholder="Describe this audio file&hellip;"
+                            <# } else { #>
+                                placeholder="Describe this media file&hellip;"
+                                <# } #> {{ maybeReadOnly }} />
+                                    <# }
+                                            } #>
+</script>
+
+<script type="text/html" id="tmpl-attachment-details">
+    <h3>
+        Attachment Details
+			<span class="settings-save-status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+    </h3>
+    <div class="attachment-info">
+        <div class="thumbnail thumbnail-{{ data.type }}">
+            <# if ( data.uploading ) { #>
+                <div class="media-progress-bar">
+                    <div></div>
+                </div>
+                <# } else if ( 'image' === data.type && data.sizes ) { #>
+                    <img src="{{ data.size.url }}" draggable="false"/>
+                    <# } else { #>
+                        <img src="{{ data.icon }}" class="icon" draggable="false"/>
+                        <# } #>
+        </div>
+        <div class="details">
+            <div class="filename">{{ data.filename }}</div>
+            <div class="uploaded">{{ data.dateFormatted }}</div>
+
+            <div class="file-size">{{ data.filesizeHumanReadable }}</div>
+            <# if ( 'image' === data.type && ! data.uploading ) { #>
+                <# if ( data.width && data.height ) { #>
+                    <div class="dimensions">{{ data.width }} &times; {{ data.height }}</div>
+                    <# } #>
+
+                        <# if ( data.can.save && data.sizes ) { #>
+                            <a class="edit-attachment" href="{{ data.editLink }}&amp;image-editor" target="_blank">Edit
+                                Image</a>
+                            <a class="refresh-attachment" href="#">Refresh</a>
+                            <# } #>
+                                <# } #>
+
+                                    <# if ( data.fileLength ) { #>
+                                        <div class="file-length">Length: {{ data.fileLength }}</div>
+                                        <# } #>
+
+                                            <# if ( ! data.uploading && data.can.remove ) { #>
+                                                <a class="delete-attachment" href="#">Delete Permanently</a>
+                                                <# } #>
+
+                                                    <div class="compat-meta">
+                                                        <# if ( data.compat && data.compat.meta ) { #>
+                                                            {{{ data.compat.meta }}}
+                                                            <# } #>
+                                                    </div>
+        </div>
+    </div>
+
+    <label class="setting" data-setting="url">
+        <span class="name">URL</span>
+        <input type="text" value="{{ data.url }}" readonly/>
+    </label>
+    <# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+        <label class="setting" data-setting="title">
+            <span class="name">Title</span>
+            <input type="text" value="{{ data.title }}" {{ maybeReadOnly }} />
+        </label>
+        <# if ( 'audio' === data.type ) { #>
+            <label class="setting" data-setting="artist">
+                <span class="name">Artist</span>
+                <input type="text" value="{{ data.artist || data.meta.artist || '' }}"/>
+            </label>
+            <label class="setting" data-setting="album">
+                <span class="name">Album</span>
+                <input type="text" value="{{ data.album || data.meta.album || '' }}"/>
+            </label>
+            <# } #>
+                <label class="setting" data-setting="caption">
+                    <span class="name">Caption</span>
+                    <textarea {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+                </label>
+                <# if ( 'image' === data.type ) { #>
+                    <label class="setting" data-setting="alt">
+                        <span class="name">Alt Text</span>
+                        <input type="text" value="{{ data.alt }}" {{ maybeReadOnly }} />
+                    </label>
+                    <# } #>
+                        <label class="setting" data-setting="description">
+                            <span class="name">Description</span>
+                            <textarea {{ maybeReadOnly }}>{{ data.description }}</textarea>
+                        </label>
+</script>
+
+<script type="text/html" id="tmpl-media-selection">
+    <div class="selection-info">
+        <span class="count"></span>
+        <# if ( data.editable ) { #>
+            <a class="edit-selection" href="#">Edit Selection</a>
+            <# } #>
+                <# if ( data.clearable ) { #>
+                    <a class="clear-selection" href="#">Clear</a>
+                    <# } #>
+    </div>
+    <div class="selection-view"></div>
+</script>
+
+<script type="text/html" id="tmpl-attachment-display-settings">
+    <h3>Attachment Display Settings</h3>
+
+    <# if ( 'image' === data.type ) { #>
+        <label class="setting">
+            <span>Alignment</span>
+            <select class="alignment"
+                    data-setting="align"
+            <# if ( data.userSettings ) { #>
+                data-user-setting="align"
+                <# } #>>
+
+                    <option value="left">
+                        Left
+                    </option>
+                    <option value="center">
+                        Center
+                    </option>
+                    <option value="right">
+                        Right
+                    </option>
+                    <option value="none" selected>
+                        None
+                    </option>
+                    </select>
+        </label>
+        <# } #>
+
+            <div class="setting">
+                <label>
+                    <# if ( data.model.canEmbed ) { #>
+                        <span>Embed or Link</span>
+                        <# } else { #>
+                            <span>Link To</span>
+                            <# } #>
+
+                                <select class="link-to"
+                                        data-setting="link"
+                                <# if ( data.userSettings && ! data.model.canEmbed ) { #>
+                                    data-user-setting="urlbutton"
+                                    <# } #>>
+
+                                        <# if ( data.model.canEmbed ) { #>
+                                            <option value="embed" selected>
+                                                Embed Media Player
+                                            </option>
+                                            <option value="file">
+                                                <# } else { #>
+                                                    <option value="file" selected>
+                                                        <# } #>
+                                                            <# if ( data.model.canEmbed ) { #>
+                                                                Link to Media File
+                                                                <# } else { #>
+                                                                    Media File
+                                                                    <# } #>
+                                                    </option>
+                                                    <option value="post">
+                                                        <# if ( data.model.canEmbed ) { #>
+                                                            Link to Attachment Page
+                                                            <# } else { #>
+                                                                Attachment Page
+                                                                <# } #>
+                                                    </option>
+                                                    <# if ( 'image' === data.type ) { #>
+                                                        <option value="custom">
+                                                            Custom URL
+                                                        </option>
+                                                        <option value="none">
+                                                            None
+                                                        </option>
+                                                        <# } #>
+                                                            </select>
+                </label>
+                <input type="text" class="link-to-custom" data-setting="linkUrl"/>
+            </div>
+
+            <# if ( 'undefined' !== typeof data.sizes ) { #>
+                <label class="setting">
+                    <span>Size</span>
+                    <select class="size" name="size"
+                            data-setting="size"
+                    <# if ( data.userSettings ) { #>
+                        data-user-setting="imgsize"
+                        <# } #>>
+                            <#
+                                    var size = data.sizes['thumbnail'];
+                                    if ( size ) { #>
+                                <option value="thumbnail">
+                                    Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+                                </option>
+                                <# } #>
+                                    <#
+                                            var size = data.sizes['medium'];
+                                            if ( size ) { #>
+                                        <option value="medium">
+                                            Medium &ndash; {{ size.width }} &times; {{ size.height }}
+                                        </option>
+                                        <# } #>
+                                            <#
+                                                    var size = data.sizes['large'];
+                                                    if ( size ) { #>
+                                                <option value="large">
+                                                    Large &ndash; {{ size.width }} &times; {{ size.height }}
+                                                </option>
+                                                <# } #>
+                                                    <#
+                                                            var size = data.sizes['full'];
+                                                            if ( size ) { #>
+                                                        <option value="full" selected='selected'>
+                                                            Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+                                                        </option>
+                                                        <# } #>
+                                                            <#
+                                                                    var size = data.sizes['square'];
+                                                                    if ( size ) { #>
+                                                                <option value="square">
+                                                                    Square &ndash; {{ size.width }} &times; {{
+                                                                    size.height }}
+                                                                </option>
+                                                                <# } #>
+                                                                    <#
+                                                                            var size = data.sizes['featured'];
+                                                                            if ( size ) { #>
+                                                                        <option value="featured">
+                                                                            Featured Thin &ndash; {{ size.width
+                                                                            }} &times; {{ size.height }}
+                                                                        </option>
+                                                                        <# } #>
+                                                                            <#
+                                                                                    var size = data.sizes['featured_large'];
+                                                                                    if ( size ) { #>
+                                                                                <option value="featured_large">
+                                                                                    Featured Large &ndash; {{ size.width
+                                                                                    }} &times; {{ size.height }}
+                                                                                </option>
+                                                                                <# } #>
+                                                                                    <#
+                                                                                            var size = data.sizes['portfolio'];
+                                                                                            if ( size ) { #>
+                                                                                        <option value="portfolio">
+                                                                                            Portfolio &ndash; {{
+                                                                                            size.width }} &times; {{
+                                                                                            size.height }}
+                                                                                        </option>
+                                                                                        <# } #>
+                                                                                            <#
+                                                                                                    var size = data.sizes['gallery'];
+                                                                                                    if ( size ) { #>
+                                                                                                <option value="gallery">
+                                                                                                    Gallery &ndash; {{
+                                                                                                    size.width
+                                                                                                    }} &times; {{
+                                                                                                    size.height }}
+                                                                                                </option>
+                                                                                                <# } #>
+                                                                                                    <#
+                                                                                                            var size = data.sizes['entry_with_sidebar'];
+                                                                                                            if ( size ) { #>
+                                                                                                        <option value="entry_with_sidebar">
+                                                                                                            Entry with
+                                                                                                            Sidebar &ndash;
+                                                                                                            {{
+                                                                                                            size.width
+                                                                                                            }} &times;
+                                                                                                            {{
+                                                                                                            size.height
+                                                                                                            }}
+                                                                                                        </option>
+                                                                                                        <# } #>
+                                                                                                            <#
+                                                                                                                    var size = data.sizes['entry_without_sidebar'];
+                                                                                                                    if ( size ) { #>
+                                                                                                                <option value="entry_without_sidebar">
+                                                                                                                    Entry
+                                                                                                                    without
+                                                                                                                    Sidebar &ndash;
+                                                                                                                    {{
+                                                                                                                    size.width
+                                                                                                                    }} &times;
+                                                                                                                    {{
+                                                                                                                    size.height
+                                                                                                                    }}
+                                                                                                                </option>
+                                                                                                                <# } #>
+                                                                                                                    <#
+                                                                                                                            var size = data.sizes['extra_large'];
+                                                                                                                            if ( size ) { #>
+                                                                                                                        <option value="extra_large">
+                                                                                                                            Fullscreen
+                                                                                                                            Sections/Sliders &ndash;
+                                                                                                                            {{
+                                                                                                                            size.width
+                                                                                                                            }} &times;
+                                                                                                                            {{
+                                                                                                                            size.height
+                                                                                                                            }}
+                                                                                                                        </option>
+                                                                                                                        <# } #>
+                                                                                                                            </select>
+                </label>
+                <# } #>
+</script>
+
+<script type="text/html" id="tmpl-gallery-settings">
+    <h3>Gallery Settings</h3>
+
+    <label class="setting">
+        <span>Link To</span>
+        <select class="link-to"
+                data-setting="link"
+        <# if ( data.userSettings ) { #>
+            data-user-setting="urlbutton"
+            <# } #>>
+
+                <option value="post"
+                <# if ( ! wp.media.galleryDefaults.link || 'post' == wp.media.galleryDefaults.link ) {
+                        #>selected="selected"
+                    <# }
+                            #>>
+                        Attachment Page                </option>
+                        <option value="file"
+                        <# if ( 'file' == wp.media.galleryDefaults.link ) { #>selected="selected"
+                            <# } #>>
+                                Media File                </option>
+                                <option value="none"
+                                <# if ( 'none' == wp.media.galleryDefaults.link ) { #>selected="selected"
+                                    <# } #>>
+                                        None                </option>
+                                        </select>
+    </label>
+
+    <label class="setting">
+        <span>Columns</span>
+        <select class="columns" name="columns"
+                data-setting="columns">
+            <option value="1"
+            <#
+                    if ( 1 == wp.media.galleryDefaults.columns ) { #>selected="selected"
+                <# }
+                        #>>
+                    1                    </option>
+                    <option value="2"
+                    <#
+                            if ( 2 == wp.media.galleryDefaults.columns ) { #>selected="selected"
+                        <# }
+                                #>>
+                            2                    </option>
+                            <option value="3"
+                            <#
+                                    if ( 3 == wp.media.galleryDefaults.columns ) { #>selected="selected"
+                                <# }
+                                        #>>
+                                    3                    </option>
+                                    <option value="4"
+                                    <#
+                                            if ( 4 == wp.media.galleryDefaults.columns ) { #>selected="selected"
+                                        <# }
+                                                #>>
+                                            4                    </option>
+                                            <option value="5"
+                                            <#
+                                                    if ( 5 == wp.media.galleryDefaults.columns ) { #>selected="selected"
+                                                <# }
+                                                        #>>
+                                                    5                    </option>
+                                                    <option value="6"
+                                                    <#
+                                                            if ( 6 == wp.media.galleryDefaults.columns ) { #>
+                                                        selected="selected"
+                                                        <# }
+                                                                #>>
+                                                            6                    </option>
+                                                            <option value="7"
+                                                            <#
+                                                                    if ( 7 == wp.media.galleryDefaults.columns ) { #>
+                                                                selected="selected"
+                                                                <# }
+                                                                        #>>
+                                                                    7                    </option>
+                                                                    <option value="8"
+                                                                    <#
+                                                                            if ( 8 == wp.media.galleryDefaults.columns ) { #>
+                                                                        selected="selected"
+                                                                        <# }
+                                                                                #>>
+                                                                            8                    </option>
+                                                                            <option value="9"
+                                                                            <#
+                                                                                    if ( 9 == wp.media.galleryDefaults.columns ) { #>
+                                                                                selected="selected"
+                                                                                <# }
+                                                                                        #>>
+                                                                                    9                    </option>
+        </select>
+    </label>
+
+    <label class="setting">
+        <span>Random Order</span>
+        <input type="checkbox" data-setting="_orderbyRandom"/>
+    </label>
+
+    <label class="setting size">
+        <span>Size</span>
+        <select class="size" name="size"
+                data-setting="size"
+        <# if ( data.userSettings ) { #>
+            data-user-setting="imgsize"
+            <# } #>
+                >
+                <option value="thumbnail">
+                    Thumbnail
+                </option>
+                <option value="medium">
+                    Medium
+                </option>
+                <option value="large">
+                    Large
+                </option>
+                <option value="full">
+                    Full Size
+                </option>
+                <option value="square">
+                    Square
+                </option>
+                <option value="featured">
+                    Featured Thin
+                </option>
+                <option value="featured_large">
+                    Featured Large
+                </option>
+                <option value="portfolio">
+                    Portfolio
+                </option>
+                <option value="gallery">
+                    Gallery
+                </option>
+                <option value="entry_with_sidebar">
+                    Entry with Sidebar
+                </option>
+                <option value="entry_without_sidebar">
+                    Entry without Sidebar
+                </option>
+                <option value="extra_large">
+                    Fullscreen Sections/Sliders
+                </option>
+                </select>
+    </label>
+</script>
+
+<script type="text/html" id="tmpl-playlist-settings">
+    <h3>Playlist Settings</h3>
+
+    <# var emptyModel = _.isEmpty( data.model ),
+            isVideo = 'video' === data.controller.get('library').props.get('type'); #>
+
+        <label class="setting">
+            <input type="checkbox" data-setting="tracklist"
+            <# if ( emptyModel ) { #>
+                checked="checked"
+                <# } #> />
+                    <# if ( isVideo ) { #>
+                        <span>Show Video List</span>
+                        <# } else { #>
+                            <span>Show Tracklist</span>
+                            <# } #>
+        </label>
+
+        <# if ( ! isVideo ) { #>
+            <label class="setting">
+                <input type="checkbox" data-setting="artists"
+                <# if ( emptyModel ) { #>
+                    checked="checked"
+                    <# } #> />
+                        <span>Show Artist Name in Tracklist</span>
+            </label>
+            <# } #>
+
+                <label class="setting">
+                    <input type="checkbox" data-setting="images"
+                    <# if ( emptyModel ) { #>
+                        checked="checked"
+                        <# } #> />
+                            <span>Show Images</span>
+                </label>
+</script>
+
+<script type="text/html" id="tmpl-embed-link-settings">
+    <label class="setting title">
+        <span>Title</span>
+        <input type="text" class="alignment" data-setting="title"/>
+    </label>
+    <div class="embed-container" style="display: none;">
+        <div class="embed-preview"></div>
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-embed-image-settings">
+    <div class="thumbnail">
+        <img src="{{ data.model.url }}" draggable="false"/>
+    </div>
+
+    <label class="setting caption">
+        <span>Caption</span>
+        <textarea data-setting="caption"/>
+    </label>
+
+    <label class="setting alt-text">
+        <span>Alt Text</span>
+        <input type="text" data-setting="alt"/>
+    </label>
+
+    <div class="setting align">
+        <span>Align</span>
+
+        <div class="button-group button-large" data-setting="align">
+            <button class="button" value="left">
+                Left
+            </button>
+            <button class="button" value="center">
+                Center
+            </button>
+            <button class="button" value="right">
+                Right
+            </button>
+            <button class="button active" value="none">
+                None
+            </button>
+        </div>
+    </div>
+
+    <div class="setting link-to">
+        <span>Link To</span>
+
+        <div class="button-group button-large" data-setting="link">
+            <button class="button" value="file">
+                Image URL
+            </button>
+            <button class="button" value="custom">
+                Custom URL
+            </button>
+            <button class="button active" value="none">
+                None
+            </button>
+        </div>
+        <input type="text" class="link-to-custom" data-setting="linkUrl"/>
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-image-details">
+    <div class="media-embed">
+        <div class="embed-media-settings">
+            <div class="column-image">
+                <div class="image">
+                    <img src="{{ data.model.url }}" draggable="false"/>
+
+                    <# if ( data.attachment && window.imageEdit ) { #>
+                        <div class="actions">
+                            <input type="button" class="edit-attachment button" value="Edit Original"/>
+                            <input type="button" class="replace-attachment button" value="Replace"/>
+                        </div>
+                        <# } #>
+                </div>
+            </div>
+            <div class="column-settings">
+                <label class="setting caption">
+                    <span>Caption</span>
+                    <textarea data-setting="caption">{{ data.model.caption }}</textarea>
+                </label>
+
+                <label class="setting alt-text">
+                    <span>Alternative Text</span>
+                    <input type="text" data-setting="alt" value="{{ data.model.alt }}"/>
+                </label>
+
+                <h3>Display Settings</h3>
+
+                <div class="setting align">
+                    <span>Align</span>
+
+                    <div class="button-group button-large" data-setting="align">
+                        <button class="button" value="left">
+                            Left
+                        </button>
+                        <button class="button" value="center">
+                            Center
+                        </button>
+                        <button class="button" value="right">
+                            Right
+                        </button>
+                        <button class="button active" value="none">
+                            None
+                        </button>
+                    </div>
+                </div>
+
+                <# if ( data.attachment ) { #>
+                    <# if ( 'undefined' !== typeof data.attachment.sizes ) { #>
+                        <label class="setting size">
+                            <span>Size</span>
+                            <select class="size" name="size"
+                                    data-setting="size"
+                            <# if ( data.userSettings ) { #>
+                                data-user-setting="imgsize"
+                                <# } #>>
+                                    <#
+                                            var size = data.sizes['thumbnail'];
+                                            if ( size ) { #>
+                                        <option value="thumbnail">
+                                            Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+                                        </option>
+                                        <# } #>
+                                            <#
+                                                    var size = data.sizes['medium'];
+                                                    if ( size ) { #>
+                                                <option value="medium">
+                                                    Medium &ndash; {{ size.width }} &times; {{ size.height }}
+                                                </option>
+                                                <# } #>
+                                                    <#
+                                                            var size = data.sizes['large'];
+                                                            if ( size ) { #>
+                                                        <option value="large">
+                                                            Large &ndash; {{ size.width }} &times; {{ size.height }}
+                                                        </option>
+                                                        <# } #>
+                                                            <#
+                                                                    var size = data.sizes['full'];
+                                                                    if ( size ) { #>
+                                                                <option value="full">
+                                                                    Full Size &ndash; {{ size.width }} &times; {{
+                                                                    size.height }}
+                                                                </option>
+                                                                <# } #>
+                                                                    <#
+                                                                            var size = data.sizes['square'];
+                                                                            if ( size ) { #>
+                                                                        <option value="square">
+                                                                            Square &ndash; {{ size.width }} &times; {{
+                                                                            size.height }}
+                                                                        </option>
+                                                                        <# } #>
+                                                                            <#
+                                                                                    var size = data.sizes['featured'];
+                                                                                    if ( size ) { #>
+                                                                                <option value="featured">
+                                                                                    Featured Thin &ndash; {{ size.width
+                                                                                    }} &times; {{ size.height }}
+                                                                                </option>
+                                                                                <# } #>
+                                                                                    <#
+                                                                                            var size = data.sizes['featured_large'];
+                                                                                            if ( size ) { #>
+                                                                                        <option value="featured_large">
+                                                                                            Featured Large &ndash; {{
+                                                                                            size.width }} &times; {{
+                                                                                            size.height }}
+                                                                                        </option>
+                                                                                        <# } #>
+                                                                                            <#
+                                                                                                    var size = data.sizes['portfolio'];
+                                                                                                    if ( size ) { #>
+                                                                                                <option value="portfolio">
+                                                                                                    Portfolio &ndash; {{
+                                                                                                    size.width
+                                                                                                    }} &times; {{
+                                                                                                    size.height }}
+                                                                                                </option>
+                                                                                                <# } #>
+                                                                                                    <#
+                                                                                                            var size = data.sizes['gallery'];
+                                                                                                            if ( size ) { #>
+                                                                                                        <option value="gallery">
+                                                                                                            Gallery &ndash;
+                                                                                                            {{
+                                                                                                            size.width
+                                                                                                            }} &times;
+                                                                                                            {{
+                                                                                                            size.height
+                                                                                                            }}
+                                                                                                        </option>
+                                                                                                        <# } #>
+                                                                                                            <#
+                                                                                                                    var size = data.sizes['entry_with_sidebar'];
+                                                                                                                    if ( size ) { #>
+                                                                                                                <option value="entry_with_sidebar">
+                                                                                                                    Entry
+                                                                                                                    with
+                                                                                                                    Sidebar &ndash;
+                                                                                                                    {{
+                                                                                                                    size.width
+                                                                                                                    }} &times;
+                                                                                                                    {{
+                                                                                                                    size.height
+                                                                                                                    }}
+                                                                                                                </option>
+                                                                                                                <# } #>
+                                                                                                                    <#
+                                                                                                                            var size = data.sizes['entry_without_sidebar'];
+                                                                                                                            if ( size ) { #>
+                                                                                                                        <option value="entry_without_sidebar">
+                                                                                                                            Entry
+                                                                                                                            without
+                                                                                                                            Sidebar &ndash;
+                                                                                                                            {{
+                                                                                                                            size.width
+                                                                                                                            }} &times;
+                                                                                                                            {{
+                                                                                                                            size.height
+                                                                                                                            }}
+                                                                                                                        </option>
+                                                                                                                        <# } #>
+                                                                                                                            <#
+                                                                                                                                    var size = data.sizes['extra_large'];
+                                                                                                                                    if ( size ) { #>
+                                                                                                                                <option value="extra_large">
+                                                                                                                                    Fullscreen
+                                                                                                                                    Sections/Sliders &ndash;
+                                                                                                                                    {{
+                                                                                                                                    size.width
+                                                                                                                                    }} &times;
+                                                                                                                                    {{
+                                                                                                                                    size.height
+                                                                                                                                    }}
+                                                                                                                                </option>
+                                                                                                                                <# } #>
+                                                                                                                                    <option value="custom">
+                                                                                                                                        Custom
+                                                                                                                                        Size
+                                                                                                                                    </option>
+                                                                                                                                    </select>
+                        </label>
+                        <# } #>
+                            <div class="custom-size<# if ( data.model.size !== 'custom' ) { #> hidden<# } #>">
+                                <label><span>Width <small>(px)</small></span> <input data-setting="customWidth"
+                                                                                     type="number" step="1"
+                                                                                     value="{{ data.model.customWidth }}"/></label><span
+                                    class="sep">&times;</span><label><span>Height <small>(px)</small></span><input
+                                    data-setting="customHeight" type="number" step="1"
+                                    value="{{ data.model.customHeight }}"/></label>
+                            </div>
+                            <# } #>
+
+                                <div class="setting link-to">
+                                    <span>Link To</span>
+                                    <select data-setting="link">
+                                        <# if ( data.attachment ) { #>
+                                            <option value="file">
+                                                Media File
+                                            </option>
+                                            <option value="post">
+                                                Attachment Page
+                                            </option>
+                                            <# } else { #>
+                                                <option value="file">
+                                                    Image URL
+                                                </option>
+                                                <# } #>
+                                                    <option value="custom">
+                                                        Custom URL
+                                                    </option>
+                                                    <option value="none">
+                                                        None
+                                                    </option>
+                                    </select>
+                                    <input type="text" class="link-to-custom" data-setting="linkUrl"/>
+                                </div>
+                                <div class="advanced-section">
+                                    <h3><a class="advanced-toggle" href="#">Advanced Options</a></h3>
+
+                                    <div class="advanced-settings hidden">
+                                        <div class="advanced-image">
+                                            <label class="setting title-text">
+                                                <span>Image Title Attribute</span>
+                                                <input type="text" data-setting="title" value="{{ data.model.title }}"/>
+                                            </label>
+                                            <label class="setting extra-classes">
+                                                <span>Image CSS Class</span>
+                                                <input type="text" data-setting="extraClasses"
+                                                       value="{{ data.model.extraClasses }}"/>
+                                            </label>
+                                        </div>
+                                        <div class="advanced-link">
+                                            <div class="setting link-target">
+                                                <label><input type="checkbox" data-setting="linkTargetBlank"
+                                                              value="_blank"
+                                                    <# if ( data.model.linkTargetBlank ) { #>checked="checked"
+                                                        <# } #>>Open link in a new window/tab
+                                                </label>
+                                            </div>
+                                            <label class="setting link-rel">
+                                                <span>Link Rel</span>
+                                                <input type="text" data-setting="linkRel"
+                                                       value="{{ data.model.linkClassName }}"/>
+                                            </label>
+                                            <label class="setting link-class-name">
+                                                <span>Link CSS Class</span>
+                                                <input type="text" data-setting="linkClassName"
+                                                       value="{{ data.model.linkClassName }}"/>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+
+    var dojoConfig = {
+        async: true,
+        parseOnLoad: false,
+        isDebug: 0,
+        baseUrl: "http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile",
+        tlmSiblingOfDojo: 0,
+        useCustomLogger: false,
+        packages: [{"name": "dojo", "location": "dojo"}, {"name": "dojox", "location": "dojox"}, {
+            "name": "dijit",
+            "location": "dijit"
+        }, {"name": "cbtree", "location": "cbtree"}, {"name": "xfile", "location": "xfile"}, {
+            "name": "xide",
+            "location": "xide"
+        }, {"name": "dgrid", "location": "dgrid"}, {"name": "dstore", "location": "dstore"}, {
+            "name": "xwordpress",
+            "location": "xwordpress"
+        }, {"name": "xedit", "location": "xedit"}],
+        has: {'xlog': true, 'xide-beans': true},
+        locale: 'en'
+    };
+
+    var resourceVariables = {
+        ACE: "http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/ace/",
+        APP_URL: "http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/"
+    }
+
+</script>
+
+<link rel='stylesheet'
+      href='http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/xedit/resources/app-xedit.css' type='text/css'
+      media='all'/>
+<link rel='stylesheet' href='./demo_files/elusive-webfont.css' type='text/css' media='all'/>
+
+<script type="text/javascript"
+        src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/dojo/xedit.js"></script>
+
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/xedit/run.js"></script>
+
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/underscore.min.js"></script>
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/keypress.js"></script>
+
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/ace/ace.js"></script>
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/ace/ext-language_tools.js"></script>
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/ace/ext-modelist.js"></script>
+<script src="http://www.x4dojo.org/xedit-wp/1.2/xedit-wp//client/src/xfile/ext/ace/ext-spellcheck.js"></script>
+
+
+<style type="text/css">
+
+    #template div {
+        /* Need to reset margin here from core styles since it destroys
+           every single div contained in the editor... */
+        margin-right: 0px;
+    }
+
+    #template #editor, #template > div {
+        /* ... then redefine it in a much more scoped manner. */
+        margin-right: 210px;
+    }
+
+    #template div #newcontent {
+        width: 100%;
+    }
+
+    .dijitMenuItemHover td, .dijitMenuItemHover {
+        background: none repeat scroll 0 0 rgba(45, 15, 18, 0.53);
+        color: #fff;
+    }
+
+    .options-menu a {
+        color: #c7c7c7;
+    }
+
+    .options-menu {
+        background-color: #000000;
+    }
+
+    #wp-ace-editor {
+        position: relative;
+        height: 500px;
+        font-size: 12px;
+        border: 1px solid #BBB;
+        border-radius: 3px;
+    }
+
+    .ace_editor {
+        font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace !important;
+        height: 100%;
+        width: 100%;
+    }
+
+    #wp-ace-editor-controls table td {
+        vertical-align: center;
+        padding: 5px;
+    }
+
+    .actionToolbarButtonElusive {
+        font-family: Fontawesome;
+    }
+
+    #documentation {
+        margin-top: 100px;
+    }
+
+    .dijitIcon {
+        font-family: Fontawesome;
+    }
+
+    .acediff-gutter {
+        /*background-color: #efefef;*/
+        border-left: 1px solid #999999;
+        border-right: 1px solid #999999;
+        flex: 0 0 60px;
+        overflow: hidden;
+        width: 60px;
+        height: inherit;
+        position: absolute;
+        -moz-box-sizing: border-box;
+    }
+
+    .acediff-gutter svg {
+        /*background-color: #efefef;*/
+
+    }
+
+    #flex-container {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        top: 0px !important;
+        left: 0px;
+
+        /* these 3 lines are to prevents an unsightly scrolling bounce affect on Safari */
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+
+    #flex-container > div {
+        flex-grow: 1;
+        -webkit-flex-grow: 1;
+        position: relative;
+    }
+
+    #flex-container > div#acediff-gutter {
+        flex: 0 0 60px;
+        -webkit-flex: 0 0 60px;
+        border-left: 1px solid #999999;
+        border-right: 1px solid #999999;
+        /*background-color: #efefef;*/
+        overflow: hidden;
+    }
+
+    #acediff-gutter svg {
+        /*background-color: #efefef;*/
+    }
+
+    #acediff-left-editor {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #acediff-right-editor {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .acediff-diff {
+        background-color: rgba(216, 242, 255, 0.32);
+        border-top: 1px solid rgba(162, 215, 242, 0.54);
+        border-bottom: 1px solid rgba(162, 215, 242, 0.51);
+        position: absolute;
+        z-index: 4;
+    }
+
+    .acediff-diff.targetOnly {
+        height: 0px !important;
+        border-top: 1px solid #a2d7f2;
+        border-bottom: 0px;
+        position: absolute;
+    }
+
+    .acediff-connector {
+        fill: rgba(216, 242, 255, 0.50);
+        stroke: #a2d7f2;
+    }
+
+    .acediff-copy-left {
+        float: right;
+    }
+
+    .acediff-copy-right,
+    .acediff-copy-left {
+        position: relative;
+    }
+
+    .acediff-copy-right div {
+        margin-top: -2px;
+        /*color: #000000;*/
+        /*text-shadow: 1px 1px #ffffff;*/
+        position: absolute;
+        /*margin: 2px 3px;*/
+        margin-left: 3px;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+
+    .acediff-copy-right div:hover {
+        color: #004ea0;
+    }
+
+    .acediff-copy-left div {
+        /*color: #000000;*/
+        /*text-shadow: 1px 1px #ffffff;*/
+        margin-top: -2px;
+        position: absolute;
+        right: 0px;
+        margin-left: 3px;
+        margin-right: 3px;
+        cursor: pointer;
+    }
+
+    .acediff-copy-left div:hover {
+        color: #c98100;
+    }
+
+    .ui-widget-content {
+        background-color: #ffffff;
+        border: 0px solid #eeeeee;
+        color: #333333;
+    }
+
+    #adminmenuwrap {
+        z-index: 200;
+    }
+
+    #wpadminbar {
+        z-index: 200;
+    }
+
+</style>
+
+
+<div class="clear"></div>
+</div>
+<!-- wpwrap -->
+
+</body>
+</html>
